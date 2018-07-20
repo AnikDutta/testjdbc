@@ -1,0 +1,13 @@
+cat-app.implementationRoute.log.message.key.1 = Received request for getAircrafts
+cat-app.implementationRoute.log.message.key.2 = Failed to fetch records
+cat-app.implementationRoute.log.message.key.3 = Data retrieved
+cat-app.implementationRoute.log.message.key.4 = Received request for postAircraft
+cat-app.implementationRoute.log.message.key.5 = Successfully created new resource
+cat-app.implementationRoute.log.message.key.6 = Received request for getAircraft
+cat-app.implementationRoute.log.message.key.7 = Failed to fetch record
+cat-app.implementationRoute.log.message.key.8 = Received request for putAircraft
+cat-app.implementationRoute.log.message.key.9 = Failed to update
+cat-app.implementationRoute.log.message.key.10 = Successfully updated
+cat-app.implementationRoute.log.message.key.11 = Received request for deleteAircraft
+cat-app.implementationRoute.log.message.key.12 = Failed to delete
+cat-app.implementationRoute.log.message.key.13 = Successfully deleted
