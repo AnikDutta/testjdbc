@@ -18,6 +18,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
 import com.mysql.jdbc.Driver;
 
 import com.zaxxer.hikari.HikariConfig;
@@ -70,7 +72,16 @@ public class ApplicationConfiguration {
 	
 	@Bean(name = "dataSource")
 	@ConditionalOnExpression("#{environment.getProperty('service.type').equals('core')}")
-	public DataSource dataSource() {
+	public DataSource mysqlDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setUrl(environment.getProperty("datasource.url"));
+        dataSource.setUsername(environment.getProperty("datasource.username"));
+        dataSource.setPassword(environment.getProperty("datasource.password"));
+        dataSource.setDriverClassName(environment.getProperty("datasource.driver-class-name"));
+ 
+        return dataSource;
+    }
+	/*public DataSource dataSource() {
 		HikariConfig config = new HikariConfig();
 		config.setJdbcUrl(environment.getProperty("datasource.url"));
 		config.setUsername(environment.getProperty("datasource.username"));
@@ -81,7 +92,7 @@ public class ApplicationConfiguration {
 		config.setMaxLifetime(Long.parseLong(environment.getProperty("hikari.max.lifetime")));
 		DataSource datasource = new HikariDataSource(config);
 		return datasource;
-	}
-	
+	}*/
+	 
 
 }

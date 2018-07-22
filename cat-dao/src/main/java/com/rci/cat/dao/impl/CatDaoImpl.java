@@ -26,6 +26,7 @@ import com.rci.cat.dao.mapper.CatMapper;
 import com.rci.cat.dao.mapper.CurrencyCodesMapper;
 import com.rci.cat.dao.mapper.ErrorCodesMapper;
 import com.rci.cat.dao.mapper.OfferChannelsMapper;
+import com.rci.cat.dao.mapper.OfficeCodesMapper;
 import com.rci.cat.dao.mapper.TierConfigTypesMapper;
 import com.rci.cat.dao.util.IQuery;
 
@@ -60,6 +61,17 @@ public class CatDaoImpl implements CatDao {
 		return currencyCodesList;
 	}
 	
+	public List<String> getOfficeCodes(int regionID, Map<String, Object> headers){
+		String query = IQuery.offCodeSQL;
+		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{regionID}, new OfficeCodesMapper());
+		return offCodesList;
+	}
+	
+	public List<String> getOfficeCodes(int regionID,String source,Map<String, Object> headers){
+		String query = IQuery.offCodeSQLforSource;
+		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{regionID}, new OfficeCodesMapper());
+		return offCodesList;
+	}
 	
 	public List<CatEntity> getCats(Map<String, Object> headers) {
 		StringBuffer query = new StringBuffer();

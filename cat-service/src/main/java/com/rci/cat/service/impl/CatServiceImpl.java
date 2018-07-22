@@ -12,7 +12,7 @@ import com.rci.cat.service.mapper.CatMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("CatService")
+@Service("catService")
 public class CatServiceImpl implements CatService
 {
 

@@ -15,6 +15,8 @@ public interface CatDao {
     
     Map<String, String> getErrorCodes(Map<String, Object> headers);
     
-    List<String> getOfficeCodes(int regionID);
+    List<String> getOfficeCodes(int regionID,Map<String, Object> headers);
+    
+    List<String> getOfficeCodes(int regionID,String source,Map<String, Object> headers);
 
 }

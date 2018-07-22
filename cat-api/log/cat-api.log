@@ -648,3 +648,527 @@ Caused by: java.lang.RuntimeException: Driver com.mysql.jdbc.Driver claims to no
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
 	... 19 more
+2018-07-22 17:03:43,948 INFO  com.rci.cat.api.Application Starting Application on PC283557 with PID 29936 (D:\CAT_WEB\cat-app\cat-api\target\classes started by 608265 in D:\CAT_WEB\cat-app\cat-api)
+2018-07-22 17:03:43,966 INFO  com.rci.cat.api.Application No active profile set, falling back to default profiles: default
+2018-07-22 17:03:44,125 INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:03:44 IST 2018]; root of context hierarchy
+2018-07-22 17:03:44,680 INFO  org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.3.4.Final
+2018-07-22 17:03:46,053 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,069 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'applicationConfiguration' of type [class com.rci.cat.api.ApplicationConfiguration$$EnhancerBySpringCGLIB$$3795a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,166 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validatorFactory' of type [class org.hibernate.validator.internal.engine.ValidatorFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,200 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validator' of type [class org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,270 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df80bf67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,334 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$1aa8586] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:03:46,682 INFO  org.eclipse.jetty.util.log Logging initialized @4326ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-07-22 17:03:46,954 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory Server initialized with port: 12040
+2018-07-22 17:03:46,956 INFO  org.eclipse.jetty.server.Server jetty-9.4.1.v20170120
+2018-07-22 17:03:47,111 INFO  org.eclipse.jetty.server.session DefaultSessionIdManager workerName=node0
+2018-07-22 17:03:47,112 INFO  org.eclipse.jetty.server.session No SessionScavenger set, using defaults
+2018-07-22 17:03:47,116 INFO  org.eclipse.jetty.server.session Scavenging every 600000ms
+2018-07-22 17:03:47,122 INFO  application Initializing Spring embedded WebApplicationContext
+2018-07-22 17:03:47,123 INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3002 ms
+2018-07-22 17:03:47,332 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'CamelServlet' to [/cat-app/1.0/*]
+2018-07-22 17:03:47,335 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-22 17:03:47,336 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-22 17:03:47,336 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-22 17:03:47,337 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-22 17:03:47,337 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-22 17:03:47,884 INFO  org.eclipse.jetty.server.handler.ContextHandler Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@27f1bbe0{/,file:///C:/Users/608265/AppData/Local/Temp/jetty-docbase.4588195184879333112.12040/,AVAILABLE}
+2018-07-22 17:03:47,885 INFO  org.eclipse.jetty.server.Server Started @5531ms
+2018-07-22 17:03:48,043 INFO  org.springframework.jdbc.datasource.DriverManagerDataSource Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-22 17:03:48,690 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:03:44 IST 2018]; root of context hierarchy
+2018-07-22 17:03:48,830 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-22 17:03:48,831 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-22 17:03:48,892 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:03:48,892 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:03:48,973 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:03:50,536 INFO  org.apache.camel.impl.converter.DefaultTypeConverter Loaded 196 type converters
+2018-07-22 17:03:51,305 INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Registering beans for JMX exposure on startup
+2018-07-22 17:03:51,577 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML routes from: classpath:camel/*.xml
+2018-07-22 17:03:51,577 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2018-07-22 17:03:51,578 INFO  org.apache.camel.spring.boot.RoutesCollector Starting CamelMainRunController to ensure the main thread keeps running
+2018-07-22 17:03:51,624 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-app) is starting
+2018-07-22 17:03:51,626 INFO  org.apache.camel.management.ManagedManagementStrategy JMX is enabled
+2018-07-22 17:03:51,690 INFO  org.apache.camel.component.servlet.CamelHttpTransportServlet Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2018-07-22 17:03:51,692 INFO  application Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-22 17:03:51,693 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-22 17:03:51,740 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization completed in 47 ms
+2018-07-22 17:03:51,851 INFO  org.eclipse.jetty.server.AbstractConnector Started ServerConnector@5fffb692{HTTP/1.1,[http/1.1]}{0.0.0.0:12040}
+2018-07-22 17:03:51,854 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer Jetty started on port(s) 12040 (http/1.1)
+2018-07-22 17:03:51,886 INFO  com.rci.cat.api.Application Started Application in 8.464 seconds (JVM running for 9.533)
+2018-07-22 17:03:51,983 INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2018-07-22 17:03:52,743 INFO  org.apache.camel.spring.SpringCamelContext StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2018-07-22 17:03:53,245 INFO  org.apache.camel.spring.SpringCamelContext Route: cat-app started and consuming from: servlet:/?httpMethodRestrict=GET%2COPTIONS&matchOnUriPrefix=true&optionsEnabled=true
+2018-07-22 17:03:53,247 INFO  org.apache.camel.spring.SpringCamelContext Route: route1 started and consuming from: direct://health
+2018-07-22 17:03:53,248 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getArpAndTierTypes started and consuming from: direct://getArpAndTierTypes
+2018-07-22 17:03:53,249 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCats started and consuming from: direct://getCats
+2018-07-22 17:03:53,250 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:postCat started and consuming from: direct://postCat
+2018-07-22 17:03:53,251 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCat started and consuming from: direct://getCat
+2018-07-22 17:03:53,252 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:putCat started and consuming from: direct://putCat
+2018-07-22 17:03:53,253 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:deleteCat started and consuming from: direct://deleteCat
+2018-07-22 17:03:53,254 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /ArpAndTierTypes started and consuming from: servlet:/ArpAndTierTypes?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,254 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,255 INFO  org.apache.camel.spring.SpringCamelContext Route: POST /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=POST%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,256 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,257 INFO  org.apache.camel.spring.SpringCamelContext Route: PUT /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=PUT%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,258 INFO  org.apache.camel.spring.SpringCamelContext Route: DELETE /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=DELETE%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,259 INFO  org.apache.camel.spring.SpringCamelContext Route: health started and consuming from: servlet:/health?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:03:53,259 INFO  org.apache.camel.spring.SpringCamelContext Total 15 routes, of which 15 are started.
+2018-07-22 17:03:53,269 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-app) started in 1.646 seconds
+2018-07-22 17:04:24,311 INFO  direct:getArpAndTierTypes Received request for getAircrafts
+2018-07-22 17:04:24,344 ERROR direct:getArpAndTierTypes org.apache.camel.NoSuchBeanException: No bean could be found in the registry for: CatService
+	at org.apache.camel.component.bean.RegistryBean.getBean(RegistryBean.java:94)
+	at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:79)
+	at org.apache.camel.component.bean.BeanProducer.process(BeanProducer.java:41)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:97)
+	at org.apache.camel.http.common.CamelServlet.doService(CamelServlet.java:195)
+	at org.apache.camel.http.common.CamelServlet.service(CamelServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:206)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:541)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-07-22 17:16:53,330 INFO  com.rci.cat.api.Application Starting Application on PC283557 with PID 30072 (D:\CAT_WEB\cat-app\cat-api\target\classes started by 608265 in D:\CAT_WEB\cat-app\cat-api)
+2018-07-22 17:16:53,332 INFO  com.rci.cat.api.Application No active profile set, falling back to default profiles: default
+2018-07-22 17:16:53,429 INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:16:53 IST 2018]; root of context hierarchy
+2018-07-22 17:16:53,989 INFO  org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.3.4.Final
+2018-07-22 17:16:55,437 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:55,454 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'applicationConfiguration' of type [class com.rci.cat.api.ApplicationConfiguration$$EnhancerBySpringCGLIB$$3795a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:55,597 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validatorFactory' of type [class org.hibernate.validator.internal.engine.ValidatorFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:55,636 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validator' of type [class org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:55,692 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$df80bf67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:55,759 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$1aa8586] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:16:56,078 INFO  org.eclipse.jetty.util.log Logging initialized @3939ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-07-22 17:16:56,290 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory Server initialized with port: 12040
+2018-07-22 17:16:56,291 INFO  org.eclipse.jetty.server.Server jetty-9.4.1.v20170120
+2018-07-22 17:16:56,450 INFO  org.eclipse.jetty.server.session DefaultSessionIdManager workerName=node0
+2018-07-22 17:16:56,450 INFO  org.eclipse.jetty.server.session No SessionScavenger set, using defaults
+2018-07-22 17:16:56,454 INFO  org.eclipse.jetty.server.session Scavenging every 600000ms
+2018-07-22 17:16:56,461 INFO  application Initializing Spring embedded WebApplicationContext
+2018-07-22 17:16:56,462 INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3037 ms
+2018-07-22 17:16:56,653 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'CamelServlet' to [/cat-app/1.0/*]
+2018-07-22 17:16:56,657 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-22 17:16:56,658 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-22 17:16:56,659 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-22 17:16:56,659 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-22 17:16:56,659 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-22 17:16:56,989 INFO  org.eclipse.jetty.server.handler.ContextHandler Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@27f1bbe0{/,file:///C:/Users/608265/AppData/Local/Temp/jetty-docbase.8408357564919463338.12040/,AVAILABLE}
+2018-07-22 17:16:56,989 INFO  org.eclipse.jetty.server.Server Started @4852ms
+2018-07-22 17:16:57,127 INFO  org.springframework.jdbc.datasource.DriverManagerDataSource Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-22 17:16:57,616 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:16:53 IST 2018]; root of context hierarchy
+2018-07-22 17:16:57,735 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-22 17:16:57,736 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-22 17:16:57,791 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:16:57,792 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:16:57,868 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:16:58,950 INFO  org.apache.camel.impl.converter.DefaultTypeConverter Loaded 196 type converters
+2018-07-22 17:16:59,412 INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Registering beans for JMX exposure on startup
+2018-07-22 17:16:59,557 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML routes from: classpath:camel/*.xml
+2018-07-22 17:16:59,557 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2018-07-22 17:16:59,558 INFO  org.apache.camel.spring.boot.RoutesCollector Starting CamelMainRunController to ensure the main thread keeps running
+2018-07-22 17:16:59,563 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-app) is starting
+2018-07-22 17:16:59,566 INFO  org.apache.camel.management.ManagedManagementStrategy JMX is enabled
+2018-07-22 17:16:59,569 INFO  org.apache.camel.component.servlet.CamelHttpTransportServlet Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2018-07-22 17:16:59,571 INFO  application Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-22 17:16:59,571 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-22 17:16:59,598 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-07-22 17:16:59,635 INFO  org.eclipse.jetty.server.AbstractConnector Started ServerConnector@5fffb692{HTTP/1.1,[http/1.1]}{0.0.0.0:12040}
+2018-07-22 17:16:59,636 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer Jetty started on port(s) 12040 (http/1.1)
+2018-07-22 17:16:59,653 INFO  com.rci.cat.api.Application Started Application in 6.756 seconds (JVM running for 7.515)
+2018-07-22 17:16:59,748 INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2018-07-22 17:17:00,422 INFO  org.apache.camel.spring.SpringCamelContext StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2018-07-22 17:17:00,877 INFO  org.apache.camel.spring.SpringCamelContext Route: cat-app started and consuming from: servlet:/?httpMethodRestrict=GET%2COPTIONS&matchOnUriPrefix=true&optionsEnabled=true
+2018-07-22 17:17:00,878 INFO  org.apache.camel.spring.SpringCamelContext Route: route1 started and consuming from: direct://health
+2018-07-22 17:17:00,879 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getArpAndTierTypes started and consuming from: direct://getArpAndTierTypes
+2018-07-22 17:17:00,881 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCats started and consuming from: direct://getCats
+2018-07-22 17:17:00,882 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:postCat started and consuming from: direct://postCat
+2018-07-22 17:17:00,883 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCat started and consuming from: direct://getCat
+2018-07-22 17:17:00,885 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:putCat started and consuming from: direct://putCat
+2018-07-22 17:17:00,886 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:deleteCat started and consuming from: direct://deleteCat
+2018-07-22 17:17:00,889 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /ArpAndTierTypes started and consuming from: servlet:/ArpAndTierTypes?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,890 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,892 INFO  org.apache.camel.spring.SpringCamelContext Route: POST /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=POST%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,894 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,896 INFO  org.apache.camel.spring.SpringCamelContext Route: PUT /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=PUT%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,898 INFO  org.apache.camel.spring.SpringCamelContext Route: DELETE /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=DELETE%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,899 INFO  org.apache.camel.spring.SpringCamelContext Route: health started and consuming from: servlet:/health?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:17:00,900 INFO  org.apache.camel.spring.SpringCamelContext Total 15 routes, of which 15 are started.
+2018-07-22 17:17:00,901 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-app) started in 1.338 seconds
+2018-07-22 17:18:56,002 INFO  direct:getArpAndTierTypes Received request for getArpAndTierTypes
+2018-07-22 17:18:56,009 ERROR direct:getArpAndTierTypes org.apache.camel.NoSuchBeanException: No bean could be found in the registry for: cat-app
+	at org.apache.camel.component.bean.RegistryBean.getBean(RegistryBean.java:94)
+	at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:79)
+	at org.apache.camel.component.bean.BeanProducer.process(BeanProducer.java:41)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:97)
+	at org.apache.camel.http.common.CamelServlet.doService(CamelServlet.java:195)
+	at org.apache.camel.http.common.CamelServlet.service(CamelServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:206)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:541)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-07-22 17:22:23,656 INFO  com.rci.cat.api.Application Starting Application on PC283557 with PID 30760 (D:\CAT_WEB\cat-app\cat-api\target\classes started by 608265 in D:\CAT_WEB\cat-app\cat-api)
+2018-07-22 17:22:23,658 INFO  com.rci.cat.api.Application No active profile set, falling back to default profiles: default
+2018-07-22 17:22:23,737 INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:22:23 IST 2018]; root of context hierarchy
+2018-07-22 17:22:24,265 INFO  org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.3.4.Final
+2018-07-22 17:22:25,468 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:25,485 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'applicationConfiguration' of type [class com.rci.cat.api.ApplicationConfiguration$$EnhancerBySpringCGLIB$$21c823a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:25,587 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validatorFactory' of type [class org.hibernate.validator.internal.engine.ValidatorFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:25,618 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validator' of type [class org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:25,668 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1114d6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:25,728 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$233b138c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:22:26,073 INFO  org.eclipse.jetty.util.log Logging initialized @3604ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-07-22 17:22:26,342 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory Server initialized with port: 12040
+2018-07-22 17:22:26,345 INFO  org.eclipse.jetty.server.Server jetty-9.4.1.v20170120
+2018-07-22 17:22:26,492 INFO  org.eclipse.jetty.server.session DefaultSessionIdManager workerName=node0
+2018-07-22 17:22:26,492 INFO  org.eclipse.jetty.server.session No SessionScavenger set, using defaults
+2018-07-22 17:22:26,498 INFO  org.eclipse.jetty.server.session Scavenging every 660000ms
+2018-07-22 17:22:26,507 INFO  application Initializing Spring embedded WebApplicationContext
+2018-07-22 17:22:26,507 INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 2775 ms
+2018-07-22 17:22:26,722 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'CamelServlet' to [/cat-service/1.0/*]
+2018-07-22 17:22:26,724 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-22 17:22:26,725 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-22 17:22:26,726 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-22 17:22:26,726 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-22 17:22:26,726 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-22 17:22:27,021 INFO  org.eclipse.jetty.server.handler.ContextHandler Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@71a3a190{/,file:///C:/Users/608265/AppData/Local/Temp/jetty-docbase.2134852888246247665.12040/,AVAILABLE}
+2018-07-22 17:22:27,022 INFO  org.eclipse.jetty.server.Server Started @4566ms
+2018-07-22 17:22:27,161 INFO  org.springframework.jdbc.datasource.DriverManagerDataSource Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-22 17:22:27,674 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:22:23 IST 2018]; root of context hierarchy
+2018-07-22 17:22:27,789 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-22 17:22:27,791 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-22 17:22:27,983 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:22:27,984 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:22:28,143 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:22:29,266 INFO  org.apache.camel.impl.converter.DefaultTypeConverter Loaded 196 type converters
+2018-07-22 17:22:29,696 INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Registering beans for JMX exposure on startup
+2018-07-22 17:22:29,803 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML routes from: classpath:camel/*.xml
+2018-07-22 17:22:29,803 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2018-07-22 17:22:29,804 INFO  org.apache.camel.spring.boot.RoutesCollector Starting CamelMainRunController to ensure the main thread keeps running
+2018-07-22 17:22:29,807 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-service) is starting
+2018-07-22 17:22:29,809 INFO  org.apache.camel.management.ManagedManagementStrategy JMX is enabled
+2018-07-22 17:22:29,814 INFO  org.apache.camel.component.servlet.CamelHttpTransportServlet Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2018-07-22 17:22:29,817 INFO  application Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-22 17:22:29,817 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-22 17:22:29,846 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-07-22 17:22:29,876 INFO  org.eclipse.jetty.server.AbstractConnector Started ServerConnector@35e98af{HTTP/1.1,[http/1.1]}{0.0.0.0:12040}
+2018-07-22 17:22:29,876 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer Jetty started on port(s) 12040 (http/1.1)
+2018-07-22 17:22:29,886 INFO  com.rci.cat.api.Application Started Application in 6.665 seconds (JVM running for 7.431)
+2018-07-22 17:22:29,985 INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2018-07-22 17:22:30,623 INFO  org.apache.camel.spring.SpringCamelContext StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2018-07-22 17:22:31,001 INFO  org.apache.camel.spring.SpringCamelContext Route: cat-service started and consuming from: servlet:/?httpMethodRestrict=GET%2COPTIONS&matchOnUriPrefix=true&optionsEnabled=true
+2018-07-22 17:22:31,003 INFO  org.apache.camel.spring.SpringCamelContext Route: route1 started and consuming from: direct://health
+2018-07-22 17:22:31,004 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getArpAndTierTypes started and consuming from: direct://getArpAndTierTypes
+2018-07-22 17:22:31,005 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCats started and consuming from: direct://getCats
+2018-07-22 17:22:31,006 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:postCat started and consuming from: direct://postCat
+2018-07-22 17:22:31,007 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCat started and consuming from: direct://getCat
+2018-07-22 17:22:31,008 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:putCat started and consuming from: direct://putCat
+2018-07-22 17:22:31,009 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:deleteCat started and consuming from: direct://deleteCat
+2018-07-22 17:22:31,010 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /ArpAndTierTypes started and consuming from: servlet:/ArpAndTierTypes?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,011 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,012 INFO  org.apache.camel.spring.SpringCamelContext Route: POST /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=POST%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,014 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,015 INFO  org.apache.camel.spring.SpringCamelContext Route: PUT /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=PUT%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,016 INFO  org.apache.camel.spring.SpringCamelContext Route: DELETE /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=DELETE%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,017 INFO  org.apache.camel.spring.SpringCamelContext Route: health started and consuming from: servlet:/health?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:22:31,018 INFO  org.apache.camel.spring.SpringCamelContext Total 15 routes, of which 15 are started.
+2018-07-22 17:22:31,020 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-service) started in 1.210 seconds
+2018-07-22 17:22:37,326 INFO  direct:getArpAndTierTypes Received request for getArpAndTierTypes
+2018-07-22 17:22:37,331 ERROR direct:getArpAndTierTypes org.apache.camel.NoSuchBeanException: No bean could be found in the registry for: cat-service
+	at org.apache.camel.component.bean.RegistryBean.getBean(RegistryBean.java:94)
+	at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:79)
+	at org.apache.camel.component.bean.BeanProducer.process(BeanProducer.java:41)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:97)
+	at org.apache.camel.http.common.CamelServlet.doService(CamelServlet.java:195)
+	at org.apache.camel.http.common.CamelServlet.service(CamelServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:206)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:541)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-07-22 17:34:03,158 INFO  com.rci.cat.api.Application Starting Application on PC283557 with PID 30408 (D:\CAT_WEB\cat-app\cat-api\target\classes started by 608265 in D:\CAT_WEB\cat-app\cat-api)
+2018-07-22 17:34:03,160 INFO  com.rci.cat.api.Application No active profile set, falling back to default profiles: default
+2018-07-22 17:34:03,258 INFO  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:34:03 IST 2018]; root of context hierarchy
+2018-07-22 17:34:03,755 INFO  org.hibernate.validator.internal.util.Version HV000001: Hibernate Validator 5.3.4.Final
+2018-07-22 17:34:05,447 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration' of type [class org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:05,461 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'applicationConfiguration' of type [class com.rci.cat.api.ApplicationConfiguration$$EnhancerBySpringCGLIB$$5e19f010] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:05,568 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validatorFactory' of type [class org.hibernate.validator.internal.engine.ValidatorFactoryImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:05,602 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'validator' of type [class org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:05,680 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d6319d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:05,741 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.apache.camel.spring.boot.CamelAutoConfiguration' of type [class org.apache.camel.spring.boot.CamelAutoConfiguration$$EnhancerBySpringCGLIB$$5f8cdff5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-07-22 17:34:06,111 INFO  org.eclipse.jetty.util.log Logging initialized @4279ms to org.eclipse.jetty.util.log.Slf4jLog
+2018-07-22 17:34:06,334 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory Server initialized with port: 12040
+2018-07-22 17:34:06,336 INFO  org.eclipse.jetty.server.Server jetty-9.4.1.v20170120
+2018-07-22 17:34:06,512 INFO  org.eclipse.jetty.server.session DefaultSessionIdManager workerName=node0
+2018-07-22 17:34:06,512 INFO  org.eclipse.jetty.server.session No SessionScavenger set, using defaults
+2018-07-22 17:34:06,517 INFO  org.eclipse.jetty.server.session Scavenging every 660000ms
+2018-07-22 17:34:06,526 INFO  application Initializing Spring embedded WebApplicationContext
+2018-07-22 17:34:06,527 INFO  org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3273 ms
+2018-07-22 17:34:06,777 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'CamelServlet' to [/cat-service/1.0/*]
+2018-07-22 17:34:06,779 INFO  org.springframework.boot.web.servlet.ServletRegistrationBean Mapping servlet: 'dispatcherServlet' to [/]
+2018-07-22 17:34:06,781 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-07-22 17:34:06,781 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-07-22 17:34:06,782 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-07-22 17:34:06,782 INFO  org.springframework.boot.web.servlet.FilterRegistrationBean Mapping filter: 'requestContextFilter' to: [/*]
+2018-07-22 17:34:07,126 INFO  org.eclipse.jetty.server.handler.ContextHandler Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@5b3f3ba0{/,file:///C:/Users/608265/AppData/Local/Temp/jetty-docbase.6013297884841264774.12040/,AVAILABLE}
+2018-07-22 17:34:07,127 INFO  org.eclipse.jetty.server.Server Started @5296ms
+2018-07-22 17:34:07,226 INFO  org.springframework.jdbc.datasource.DriverManagerDataSource Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-07-22 17:34:07,938 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@704921a5: startup date [Sun Jul 22 17:34:03 IST 2018]; root of context hierarchy
+2018-07-22 17:34:08,070 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-22 17:34:08,071 INFO  org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-22 17:34:08,128 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:34:08,128 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:34:08,213 INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-22 17:34:09,384 INFO  org.apache.camel.impl.converter.DefaultTypeConverter Loaded 196 type converters
+2018-07-22 17:34:09,866 INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter Registering beans for JMX exposure on startup
+2018-07-22 17:34:10,009 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML routes from: classpath:camel/*.xml
+2018-07-22 17:34:10,009 INFO  org.apache.camel.spring.boot.RoutesCollector Loading additional Camel XML rests from: classpath:camel-rest/*.xml
+2018-07-22 17:34:10,010 INFO  org.apache.camel.spring.boot.RoutesCollector Starting CamelMainRunController to ensure the main thread keeps running
+2018-07-22 17:34:10,021 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-service) is starting
+2018-07-22 17:34:10,022 INFO  org.apache.camel.management.ManagedManagementStrategy JMX is enabled
+2018-07-22 17:34:10,024 INFO  org.apache.camel.component.servlet.CamelHttpTransportServlet Initialized CamelHttpTransportServlet[name=CamelServlet, contextPath=]
+2018-07-22 17:34:10,026 INFO  application Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-22 17:34:10,027 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization started
+2018-07-22 17:34:10,054 INFO  org.springframework.web.servlet.DispatcherServlet FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-07-22 17:34:10,113 INFO  org.eclipse.jetty.server.AbstractConnector Started ServerConnector@5bda157e{HTTP/1.1,[http/1.1]}{0.0.0.0:12040}
+2018-07-22 17:34:10,114 INFO  org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer Jetty started on port(s) 12040 (http/1.1)
+2018-07-22 17:34:10,140 INFO  com.rci.cat.api.Application Started Application in 7.499 seconds (JVM running for 8.309)
+2018-07-22 17:34:10,289 INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2018-07-22 17:34:11,013 INFO  org.apache.camel.spring.SpringCamelContext StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2018-07-22 17:34:11,362 INFO  org.apache.camel.spring.SpringCamelContext Route: cat-service started and consuming from: servlet:/?httpMethodRestrict=GET%2COPTIONS&matchOnUriPrefix=true&optionsEnabled=true
+2018-07-22 17:34:11,364 INFO  org.apache.camel.spring.SpringCamelContext Route: route1 started and consuming from: direct://health
+2018-07-22 17:34:11,365 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getArpAndTierTypes started and consuming from: direct://getArpAndTierTypes
+2018-07-22 17:34:11,366 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCats started and consuming from: direct://getCats
+2018-07-22 17:34:11,367 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:postCat started and consuming from: direct://postCat
+2018-07-22 17:34:11,367 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:getCat started and consuming from: direct://getCat
+2018-07-22 17:34:11,368 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:putCat started and consuming from: direct://putCat
+2018-07-22 17:34:11,369 INFO  org.apache.camel.spring.SpringCamelContext Route: direct:deleteCat started and consuming from: direct://deleteCat
+2018-07-22 17:34:11,370 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /ArpAndTierTypes started and consuming from: servlet:/ArpAndTierTypes?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,372 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,373 INFO  org.apache.camel.spring.SpringCamelContext Route: POST /Cats started and consuming from: servlet:/Cats?httpMethodRestrict=POST%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,374 INFO  org.apache.camel.spring.SpringCamelContext Route: GET /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,375 INFO  org.apache.camel.spring.SpringCamelContext Route: PUT /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=PUT%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,376 INFO  org.apache.camel.spring.SpringCamelContext Route: DELETE /Cats/{CatId} started and consuming from: servlet:/Cats/%7BCatId%7D?httpMethodRestrict=DELETE%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,377 INFO  org.apache.camel.spring.SpringCamelContext Route: health started and consuming from: servlet:/health?httpMethodRestrict=GET%2COPTIONS&optionsEnabled=true
+2018-07-22 17:34:11,378 INFO  org.apache.camel.spring.SpringCamelContext Total 15 routes, of which 15 are started.
+2018-07-22 17:34:11,379 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-service) started in 1.358 seconds
+2018-07-22 17:34:47,795 INFO  direct:getArpAndTierTypes Received request for getArpAndTierTypes
+2018-07-22 17:34:47,803 ERROR direct:getArpAndTierTypes org.apache.camel.NoSuchBeanException: No bean could be found in the registry for: cat-service
+	at org.apache.camel.component.bean.RegistryBean.getBean(RegistryBean.java:94)
+	at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:79)
+	at org.apache.camel.component.bean.BeanProducer.process(BeanProducer.java:41)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:542)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:120)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:197)
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:97)
+	at org.apache.camel.http.common.CamelServlet.doService(CamelServlet.java:195)
+	at org.apache.camel.http.common.CamelServlet.service(CamelServlet.java:74)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:841)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:206)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:541)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:190)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1584)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1228)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1130)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:112)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Thread.java:748)
+
