@@ -6,18 +6,15 @@ import java.util.Map;
 import com.rci.cat.dao.entity.CatEntity;
 
 public interface CatDao {
-
-
-    List<CatEntity> getCats(Map<String, Object> headers);
-
-    Object postCat(CatEntity CatEntity, Map<String, Object> headers);
-
-    CatEntity getCat(String Catid, Map<String, Object> headers);
-
-    int putCat(CatEntity CatEntity, Map<String, Object> headers);
-
-    int deleteCat(String Catid, Map<String, Object> headers);
     
-    Map<String, String> getArpAndTierTypes();
+    Map<String, String> getArpAndTierTypes(Map<String, Object> headers);
+    
+    List<String> getTierConfigTypes(Map<String, Object> headers);
+    
+    Map<String,String> getOfferChannels(Map<String, Object> headers);
+    
+    Map<String, String> getErrorCodes(Map<String, Object> headers);
+    
+    List<String> getOfficeCodes(int regionID);
 
 }

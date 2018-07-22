@@ -23,6 +23,10 @@ import com.rci.cat.dao.CatDao;
 import com.rci.cat.dao.entity.CatEntity;
 import com.rci.cat.dao.mapper.ArpMapper;
 import com.rci.cat.dao.mapper.CatMapper;
+import com.rci.cat.dao.mapper.CurrencyCodesMapper;
+import com.rci.cat.dao.mapper.ErrorCodesMapper;
+import com.rci.cat.dao.mapper.OfferChannelsMapper;
+import com.rci.cat.dao.mapper.TierConfigTypesMapper;
 import com.rci.cat.dao.util.IQuery;
 
 @Repository
@@ -31,12 +35,31 @@ public class CatDaoImpl implements CatDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
-	public Map<String, String> getArpAndTierTypes(){
-		
+	public Map<String, String> getArpAndTierTypes(Map<String, Object> headers){
 		Map<String, String> arpTierMap  = jdbcTemplate.query(IQuery.queryForArpCodes,new ArpMapper());
-	
 		return arpTierMap;	
 	}
+	
+	public List<String> getTierConfigTypes(Map<String, Object> headers){
+		List<String> tierConfigTypes = jdbcTemplate.query(IQuery.tierConfigTypeSQL, new TierConfigTypesMapper());
+		return tierConfigTypes;
+	}
+	
+	public Map<String,String> getOfferChannels(Map<String, Object> headers){
+    	Map<String,String> redemptionChannels = jdbcTemplate.query(IQuery.offerChannelSQL, new OfferChannelsMapper());
+    	return redemptionChannels;
+    }
+	
+	public Map<String, String> getErrorCodes(Map<String, Object> headers) {
+		Map<String, String> errorCodesMap = jdbcTemplate.query(IQuery.errorCodesSQL, new ErrorCodesMapper());
+		return errorCodesMap;
+	}
+	
+	public List<String> getCurrencyCodes(Map<String, Object> headers) {
+		List<String> currencyCodesList = jdbcTemplate.query(IQuery.currencySQL, new CurrencyCodesMapper());
+		return currencyCodesList;
+	}
+	
 	
 	public List<CatEntity> getCats(Map<String, Object> headers) {
 		StringBuffer query = new StringBuffer();
@@ -68,57 +91,7 @@ public class CatDaoImpl implements CatDao {
 		return Cats;
 	}
 
-	public Object postCat(CatEntity CatEntity, Map<String, Object> headers) {
-		String query = IQuery.queryForCreate;
-		KeyHolder generatedKeyHolder = new GeneratedKeyHolder();
-		PreparedStatementCreator psc = new PreparedStatementCreator() {
-
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-				PreparedStatement ps = connection.prepareStatement(query, new String[] { "ID" });
-				ps.setString(1, CatEntity.getIata());
-				ps.setString(2, CatEntity.getIcao());
-				ps.setString(3, CatEntity.getDescription());
-				ps.setString(4, CatEntity.getType());
-				ps.setString(5, CatEntity.getCategory());
-				return ps;
-			}
-		};
-		jdbcTemplate.update(psc, generatedKeyHolder);
-		Long generatedId = (generatedKeyHolder.getKey() != null ? generatedKeyHolder.getKey().longValue() : null);
-		return generatedId;
-	}
-
-	public CatEntity getCat(String Catid, Map<String, Object> headers) {
-		String query = IQuery.queryForGetById;
-		List<CatEntity> Cats = jdbcTemplate.query(query, new Object[] { Catid }, new CatMapper());
-		if (Cats.size() == 1) {
-			return Cats.get(0);
-		}
-		return null;
-	}
-
-	public int putCat(CatEntity CatEntity, Map<String, Object> headers) {
-		String SQL = IQuery.queryForUpdate;
-		return jdbcTemplate.update(new PreparedStatementCreator() {
-
-			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
-				PreparedStatement ps = connection.prepareStatement(SQL);
-				ps.setString(1, CatEntity.getIata());
-				ps.setString(2, CatEntity.getIcao());
-				ps.setString(3, CatEntity.getDescription());
-				ps.setString(4, CatEntity.getType());
-				ps.setString(5, CatEntity.getCategory());
-				ps.setLong(6, CatEntity.getId());
-				return ps;
-			}
-		});
-	}
-
-	public int deleteCat(String Catid, Map<String, Object> headers) {
-		String sql = IQuery.queryForDelete;
-		return jdbcTemplate.update(sql, Catid);
-	}
-
+	
 	private String getUnderScoreSeparatedFromCamelCasing(String camelCasingWord) {
 		return CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, camelCasingWord);
 	}

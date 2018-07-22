@@ -13,8 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("CatService")
-public class CatServiceImpl
-    implements CatService
+public class CatServiceImpl implements CatService
 {
 
     @Autowired
@@ -22,23 +21,9 @@ public class CatServiceImpl
     @Autowired
     private CatMapper CatMapper;
 
-    @Override
-    public List<Cat> getCats(Map<String, Object> headers) {
-        List<Cat> CatList = new ArrayList<Cat>();
-        for (CatEntity CatEntity: CatDao.getCats(headers)) {
-            CatList.add(CatMapper.convertToResource(CatEntity));
-        }
-        return CatList;
-    }
-
    
     @Override
-    public Cat getCat(String Catid, Map<String, Object> headers) {
-        return CatMapper.convertToResource(CatDao.getCat(Catid, headers));
-    }
-
-    @Override
     public Map<String, String> getArpAndTierTypes(Map<String, Object> headers){
-    	return CatDao.getArpAndTierTypes();
+    	return CatDao.getArpAndTierTypes(headers);
     }
 }
