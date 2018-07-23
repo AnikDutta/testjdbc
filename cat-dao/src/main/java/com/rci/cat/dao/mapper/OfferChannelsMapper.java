@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.rci.cat.dao.CatDaoConstants;
-import com.rci.cat.dao.entity.CatEntity;
 
 public class OfferChannelsMapper implements ResultSetExtractor<Map<String,String>> {
 

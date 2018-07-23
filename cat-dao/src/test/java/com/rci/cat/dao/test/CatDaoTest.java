@@ -19,8 +19,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.rci.cat.dao.CatDao;
-import com.rci.cat.dao.entity.CatEntity;
-import com.rci.cat.dao.mapper.CatMapper;
 import com.rci.cat.dao.test.config.TestConfiguration;
 
 @RunWith(SpringRunner.class)

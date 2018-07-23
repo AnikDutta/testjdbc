@@ -1,10 +1,12 @@
 package com.rci.cat.api;
 
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
-
+import oracle.jdbc.pool.OracleDataSource;
 import org.apache.camel.CamelContext;
 import org.apache.camel.component.servlet.CamelHttpTransportServlet;
 import org.apache.camel.spring.SpringCamelContext;
@@ -18,10 +20,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
-import com.mysql.jdbc.Driver;
-
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -72,16 +70,17 @@ public class ApplicationConfiguration {
 	
 	@Bean(name = "dataSource")
 	@ConditionalOnExpression("#{environment.getProperty('service.type').equals('core')}")
-	public DataSource mysqlDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl(environment.getProperty("datasource.url"));
-        dataSource.setUsername(environment.getProperty("datasource.username"));
+	/*public DataSource dataSource() throws SQLException {
+        OracleDataSource dataSource = new OracleDataSource();
+        dataSource.setURL(environment.getProperty("datasource.url"));
+        dataSource.setUser(environment.getProperty("datasource.username"));
         dataSource.setPassword(environment.getProperty("datasource.password"));
-        dataSource.setDriverClassName(environment.getProperty("datasource.driver-class-name"));
- 
+        dataSource.setImplicitCachingEnabled(true);
+        dataSource.setFastConnectionFailoverEnabled(true);
         return dataSource;
-    }
-	/*public DataSource dataSource() {
+    }*/
+	
+	public DataSource dataSource() {
 		HikariConfig config = new HikariConfig();
 		config.setJdbcUrl(environment.getProperty("datasource.url"));
 		config.setUsername(environment.getProperty("datasource.username"));
@@ -92,7 +91,6 @@ public class ApplicationConfiguration {
 		config.setMaxLifetime(Long.parseLong(environment.getProperty("hikari.max.lifetime")));
 		DataSource datasource = new HikariDataSource(config);
 		return datasource;
-	}*/
-	 
+	}
 
 }

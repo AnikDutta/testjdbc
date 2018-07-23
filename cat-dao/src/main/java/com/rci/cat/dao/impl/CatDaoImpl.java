@@ -20,9 +20,7 @@ import org.springframework.stereotype.Repository;
 import com.google.common.base.CaseFormat;
 
 import com.rci.cat.dao.CatDao;
-import com.rci.cat.dao.entity.CatEntity;
 import com.rci.cat.dao.mapper.ArpMapper;
-import com.rci.cat.dao.mapper.CatMapper;
 import com.rci.cat.dao.mapper.CurrencyCodesMapper;
 import com.rci.cat.dao.mapper.ErrorCodesMapper;
 import com.rci.cat.dao.mapper.OfferChannelsMapper;
@@ -73,39 +71,4 @@ public class CatDaoImpl implements CatDao {
 		return offCodesList;
 	}
 	
-	public List<CatEntity> getCats(Map<String, Object> headers) {
-		StringBuffer query = new StringBuffer();
-		Class<CatEntity> CatClass = CatEntity.class;
-		Field[] fields = CatClass.getDeclaredFields();
-		List<String> paramNames = new ArrayList<String>();
-		List<String> paramValues = new ArrayList<String>();
-
-		for (Field field : fields) {
-			String fieldName = field.getName();
-			if (headers.containsKey(fieldName)) {
-				paramNames.add(fieldName);
-				paramValues.add((String) headers.get(fieldName));
-			}
-		}
-		query.append(IQuery.queryForGetAll);
-		if (paramNames.size() > 0) {
-			query.append(" WHERE ");
-			for (int i = 0; i < paramNames.size(); i++) {
-				if (i == paramNames.size() - 1) {
-					query.append(getUnderScoreSeparatedFromCamelCasing(paramNames.get(i))).append(" LIKE ? ");
-				} else {
-					query.append(getUnderScoreSeparatedFromCamelCasing(paramNames.get(i))).append(" LIKE ? AND ");
-				}
-			}
-		}
-		List<CatEntity> Cats = jdbcTemplate.query(query.toString(), paramValues.toArray(),
-				new CatMapper());
-		return Cats;
-	}
-
-	
-	private String getUnderScoreSeparatedFromCamelCasing(String camelCasingWord) {
-		return CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, camelCasingWord);
-	}
-
 }

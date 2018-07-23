@@ -15,7 +15,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.rci.cat.dao.CatDao;
-import com.rci.cat.dao.entity.CatEntity;
 import com.rci.cat.model.Cat;
 import com.rci.cat.service.CatService;
 import com.rci.cat.service.test.config.TestConfiguration;

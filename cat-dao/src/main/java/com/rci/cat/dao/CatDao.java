@@ -3,7 +3,6 @@ package com.rci.cat.dao;
 
 import java.util.List;
 import java.util.Map;
-import com.rci.cat.dao.entity.CatEntity;
 
 public interface CatDao {
     
