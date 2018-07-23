@@ -17,5 +17,19 @@ public interface CatDao {
     List<String> getOfficeCodes(int regionID,Map<String, Object> headers);
     
     List<String> getOfficeCodes(int regionID,String source,Map<String, Object> headers);
+    
+    List<String> getCurrCodes(String offCode, Map<String, Object> headers);
+    
+    Map<Integer, String> getRegions();
+    
+    Map<Integer, String> getRewardSubTypes(int rewardID);
+    
+    Map<Integer, String> getRewardTypes();
+    
+    List<String> getBedRoomTypes();
+    
+    Map<Integer, String> getRegionLocales(int regionID);
+    
+    Map<Integer, String> getAllRegionLocales();
 
 }

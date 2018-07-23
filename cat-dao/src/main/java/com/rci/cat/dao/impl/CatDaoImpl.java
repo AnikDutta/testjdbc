@@ -21,10 +21,17 @@ import com.google.common.base.CaseFormat;
 
 import com.rci.cat.dao.CatDao;
 import com.rci.cat.dao.mapper.ArpMapper;
+import com.rci.cat.dao.mapper.BedRoomTypesMapper;
+import com.rci.cat.dao.mapper.CurrCodesMapper;
 import com.rci.cat.dao.mapper.CurrencyCodesMapper;
 import com.rci.cat.dao.mapper.ErrorCodesMapper;
 import com.rci.cat.dao.mapper.OfferChannelsMapper;
+import com.rci.cat.dao.mapper.OfferRegionLocalesMapper;
 import com.rci.cat.dao.mapper.OfficeCodesMapper;
+import com.rci.cat.dao.mapper.RegionLocalesMapper;
+import com.rci.cat.dao.mapper.RegionsMapper;
+import com.rci.cat.dao.mapper.RewardSubTypesMapper;
+import com.rci.cat.dao.mapper.RewardTypesMapper;
 import com.rci.cat.dao.mapper.TierConfigTypesMapper;
 import com.rci.cat.dao.util.IQuery;
 
@@ -64,11 +71,62 @@ public class CatDaoImpl implements CatDao {
 		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{regionID}, new OfficeCodesMapper());
 		return offCodesList;
 	}
-	
+	//@TODO
 	public List<String> getOfficeCodes(int regionID,String source,Map<String, Object> headers){
 		String query = IQuery.offCodeSQLforSource;
 		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{regionID}, new OfficeCodesMapper());
 		return offCodesList;
+	}
+	
+	public List<String> getCurrCodes(String offCode, Map<String, Object> headers){
+		String query = IQuery.offCurrCodeSQL;
+		List<String> currCodes = jdbcTemplate.query(query, new Object[]{offCode}, new CurrCodesMapper());
+		return currCodes;
+	}
+	
+	
+	public Map<Integer, String> getRewardTypes() {
+		Map<Integer, String> rewardTypeMap = jdbcTemplate.query(IQuery.rewardTypeSQL, new RewardTypesMapper());
+		return rewardTypeMap;
+	}
+	
+	public Map<Integer, String> getRewardSubTypes(int rewardID){
+		String query = IQuery.rewardSubTypeSQL;
+		Map<Integer, String> rewardSubTypeMap = jdbcTemplate.query(query, new Object[]{rewardID}, new RewardSubTypesMapper());
+		return rewardSubTypeMap;
+	}
+	
+	public List<String> getBedRoomTypes() {
+		String query = IQuery.bedRoomTypeSQL;
+		List<String> bedRoomCode = jdbcTemplate.query(query, new BedRoomTypesMapper());
+		return bedRoomCode;
+	}
+	
+	public Map<Integer, String> getRegions(){
+		String query = IQuery.regionSQL;
+		Map<Integer, String> regions = jdbcTemplate.query(query, new RegionsMapper());
+		return regions;
+	}
+	
+	public Map<Integer, String> getRegionLocales(int regionID){
+		String query = IQuery.localeSQL;
+		Map<Integer, String> locales = jdbcTemplate.query(query, new Object[]{regionID}, new RegionLocalesMapper());
+		return locales;
+	}
+	
+	public Map<Integer, String> getAllRegionLocales(){
+		String query = IQuery.allLocaleSQL;
+		Map<Integer, String> locales = jdbcTemplate.query(query, new RegionLocalesMapper());
+		return locales;
+	}
+	
+	//@TODO
+	//public RewardSetupDataResponse getRewardSetupData(RewardSetupDataRequest request)
+	
+	public List<String> getOfferRegionLocales(Long rewardId){
+		String query = IQuery.OfferRegionLocalesSQL;
+		List<String> offerLocales = jdbcTemplate.query(query, new OfferRegionLocalesMapper());
+		return offerLocales;
 	}
 	
 }

@@ -3335,3 +3335,5 @@ Caused by: java.sql.SQLException: Invalid Oracle URL specified: OracleDataSource
 2018-07-23 19:18:29,763 INFO  org.apache.camel.spring.SpringCamelContext Apache Camel 2.18.2 (CamelContext: cat-service) started in 0.802 seconds
 2018-07-23 19:19:19,268 INFO  direct:getArpAndTierTypes Received request for getArpAndTierTypes
 2018-07-23 19:19:21,160 INFO  direct:getArpAndTierTypes Data retrieved
+2018-07-23 19:35:47,311 INFO  direct:getArpAndTierTypes Received request for getArpAndTierTypes
+2018-07-23 19:35:50,023 INFO  direct:getArpAndTierTypes Data retrieved
