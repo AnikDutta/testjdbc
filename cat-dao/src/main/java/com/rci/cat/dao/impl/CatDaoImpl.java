@@ -129,4 +129,6 @@ public class CatDaoImpl implements CatDao {
 		return offerLocales;
 	}
 	
+	
+	
 }
