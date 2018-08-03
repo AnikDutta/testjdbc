@@ -40,6 +40,7 @@ public class CatServiceImplementationRoute extends RouteBuilder {
 				.handled(true);
 		from("direct:getArpAndTierTypes")
 				.routeId("direct:getArpAndTierTypes")
+				.policy("authorizationPolicy")
 				.log(LoggingLevel.INFO, "{{cat-app.implementationRoute.log.message.key.1}}")
 				.to("bean:catService?method=getArpAndTierTypes(${headers})")
 				.choice()
@@ -48,5 +49,11 @@ public class CatServiceImplementationRoute extends RouteBuilder {
 					.throwException(new NotFoundException("No records found"))
 				.otherwise()
 				.log(LoggingLevel.INFO, "{{cat-app.implementationRoute.log.message.key.3}}");
+		from("direct:getInitData")
+				.routeId("direct:getInitData")
+				.policy("authorizationPolicy")
+				.log(LoggingLevel.INFO, "{{cat-app.implementationRoute.log.message.key.4}}")
+				.to("bean:catService?method=getInitData(${headers})")
+				.log(LoggingLevel.INFO, "${body}");
 	}
 }

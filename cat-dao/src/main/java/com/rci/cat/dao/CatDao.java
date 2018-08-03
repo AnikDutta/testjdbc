@@ -4,6 +4,8 @@ package com.rci.cat.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.rci.cat.dao.entity.CurrencyOffice;
+
 public interface CatDao {
     
     Map<String, String> getArpAndTierTypes(Map<String, Object> headers);
@@ -31,5 +33,9 @@ public interface CatDao {
     Map<Integer, String> getRegionLocales(int regionID);
     
     Map<Integer, String> getAllRegionLocales();
+    
+    List<String> getCurrencyCodes(Map<String, Object> headers);
+    
+    Map<String, List<CurrencyOffice>> getCurrencyOfficeMap(Map<String, Object> headers);
 
 }

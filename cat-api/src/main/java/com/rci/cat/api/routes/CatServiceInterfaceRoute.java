@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.rci.cat.model.Cat;
+import com.rci.cat.model.CatJsonModel;
 
 
 @Component
@@ -33,6 +34,13 @@ public class CatServiceInterfaceRoute extends RouteBuilder {
 						.code(200)
 					.endResponseMessage()
 					.to("direct:getArpAndTierTypes")
+				.get("/InitData")
+					.id("GET /InitData")
+					.outType(CatJsonModel.class)
+					.responseMessage()
+						.code(200)
+					.endResponseMessage()
+					.to("direct:getInitData")
 				.get("/health")
 					.id("health")
 					.description("Health route endpoint")

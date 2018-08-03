@@ -20,10 +20,12 @@ import org.springframework.stereotype.Repository;
 import com.google.common.base.CaseFormat;
 
 import com.rci.cat.dao.CatDao;
+import com.rci.cat.dao.entity.CurrencyOffice;
 import com.rci.cat.dao.mapper.ArpMapper;
 import com.rci.cat.dao.mapper.BedRoomTypesMapper;
 import com.rci.cat.dao.mapper.CurrCodesMapper;
 import com.rci.cat.dao.mapper.CurrencyCodesMapper;
+import com.rci.cat.dao.mapper.CurrencyOfficeMapper;
 import com.rci.cat.dao.mapper.ErrorCodesMapper;
 import com.rci.cat.dao.mapper.OfferChannelsMapper;
 import com.rci.cat.dao.mapper.OfferRegionLocalesMapper;
@@ -74,7 +76,7 @@ public class CatDaoImpl implements CatDao {
 	//@TODO
 	public List<String> getOfficeCodes(int regionID,String source,Map<String, Object> headers){
 		String query = IQuery.offCodeSQLforSource;
-		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{regionID}, new OfficeCodesMapper());
+		List<String> offCodesList = jdbcTemplate.query(query, new Object[]{source,regionID}, new OfficeCodesMapper());
 		return offCodesList;
 	}
 	
@@ -122,6 +124,13 @@ public class CatDaoImpl implements CatDao {
 	
 	//@TODO
 	//public RewardSetupDataResponse getRewardSetupData(RewardSetupDataRequest request)
+	public Map<String, List<CurrencyOffice>> getCurrencyOfficeMap(Map<String, Object> headers){
+		String query = IQuery.currencyOfficeMapping;
+		Map<String, List<CurrencyOffice>> regionCurrOfficeMap = jdbcTemplate.query(query, new CurrencyOfficeMapper());
+		return regionCurrOfficeMap;
+	}
+	
+	
 	
 	public List<String> getOfferRegionLocales(Long rewardId){
 		String query = IQuery.OfferRegionLocalesSQL;

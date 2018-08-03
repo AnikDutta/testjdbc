@@ -70,16 +70,7 @@ public class ApplicationConfiguration {
 	
 	@Bean(name = "dataSource")
 	@ConditionalOnExpression("#{environment.getProperty('service.type').equals('core')}")
-	/*public DataSource dataSource() throws SQLException {
-        OracleDataSource dataSource = new OracleDataSource();
-        dataSource.setURL(environment.getProperty("datasource.url"));
-        dataSource.setUser(environment.getProperty("datasource.username"));
-        dataSource.setPassword(environment.getProperty("datasource.password"));
-        dataSource.setImplicitCachingEnabled(true);
-        dataSource.setFastConnectionFailoverEnabled(true);
-        return dataSource;
-    }*/
-	
+		
 	public DataSource dataSource() {
 		HikariConfig config = new HikariConfig();
 		config.setJdbcUrl(environment.getProperty("datasource.url"));

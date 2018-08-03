@@ -22,4 +22,5 @@ public interface IQuery {
 	public String localeSQL = "SELECT L.LOCALE_ID, L.LOCALE_CODE FROM REGION_LOCALE RL, LOCALE L	WHERE RL.REGION_ID = ? AND RL.LOCALE_ID=L.LOCALE_ID AND L.active_flg='Y'";
 	public String allLocaleSQL = "SELECT L.LOCALE_ID, L.LOCALE_CODE FROM REGION_LOCALE RL, LOCALE L WHERE RL.LOCALE_ID=L.LOCALE_ID AND L.active_flg='Y' order by LOCALE_CODE";
 	public String OfferRegionLocalesSQL = "SELECT l.locale_code AS LOCALE FROM locale l, offer_locale ol, offer_promotion op, reward r WHERE l.locale_id = ol.locale_id AND ol.offer_id = op.offer_id AND op.promotion_id = r.promotion_id AND r.reward_id=?";
+	public String currencyOfficeMapping = "SELECT REGION_ID, ISO_CURRENCY, SOURCE, OFFICE_CODE FROM OFFICE_CURRENCY_LOOKUP WHERE REWARD_TYPE IN ('BOTH', 'EXCHANGE') ORDER BY REGION_ID, ISO_CURRENCY, SOURCE ";
 }
